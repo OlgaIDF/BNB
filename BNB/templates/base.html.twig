@@ -1,13 +1,50 @@
 <!DOCTYPE html>
-<html>
+<html lang="fr">
     <head>
         <meta charset="UTF-8">
-        <title>{% block title %}Welcome!{% endblock %}</title>
-        {% block stylesheets %}{% endblock %}
+        <meta name="description" content="site BNB">
+        <meta="viewport" content="width=device-width, initial-scale=1.0">
+        <meta name="autor" content="Olha NEKRASHEVYCH">
+        <link rel="stylesheet" href="{{ asset('css/style.css') }}">
+        <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+
+        <title>BNB - {% block title %}base{% endblock %}</title>
+        
     </head>
     <body>
+    <footer>
+ <div class="container-fluid">
+        <div class="row text-center bg-dark text-white">
+        <div class="col-6 p-5 font-weight-light">
+        <p class="font-weight-bold">Coordonn&eacute;es</p>
+        <div class="dropdown-divider m-3 "></div>
+        <p>100 rue du Village</p>
+        <p>999999 Ville</p>
+        <p>01.02.30</p>
+        <p>nom@gmail.com</p>     
+       </div>
+        
+        
+        <div class="col-6 p-5 font-weight-light">
+        <p class="font-weight-bold">&Agrave; propos</p>
+        <div class="dropdown-divider m-3 "></div>
+        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+        </div>
+        <div class="col-12 p-3 font-weight-light">
+{{copyright|raw}}
+        </div>
+        </div>
+        </div>
+        </footer>
 
+        <script src="
+        https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js">
+        </script>
         {% block body %}{% endblock %}
         {% block javascripts %}{% endblock %}
+        
+        
+        {% block stylesheets %}{% endblock %}
+       
     </body>
 </html>
