@@ -46,5 +46,12 @@ class MaisonsRepository extends ServiceEntityRepository
             ->getOneOrNullResult()
         ;
     }
-    */
+    
+    public function findSix(){
+        return $this->createQueryBuilder('c')
+           ->
+        
+    }
+   */ 
 }
+

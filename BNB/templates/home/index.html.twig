@@ -4,5 +4,34 @@
 
 {% block body %}
 
+<div class="container-fluid p-5">
 
+ <div class="row">
+    {% for maison in maisons %}
+    {% if loop.index <=6 %}
+<div class="col-4">
+   <div class="card" style="width: 18rem;">
+
+      <img class="card-img-top" src="..." alt="Card image cap">
+
+      <div class="card-body">
+         <h5 class="card-title">{{ maison.titre }}</h5>
+         <p class="card-text"{{ maison.description}}</p>
+      </div>
+      <li class="list-group-item">Superficie: {{ maison.superficie}}</li>
+         <li class="list-group-item">Chambres: {{ maison.chambres}}</li>
+         <li class="list-group-item">Prix: {{ maison.prix}}</li>
+         <li class="list-group-item">Note: {{ maison.note}} / 5</li>
+      </ul>
+      <div class="card-body">
+         <a href="#" class="card-link">Card link</a>
+         <a href="#" class="card-link">Another link</a>
+      </div>
+   </div>
+</div>
+{% endif %}
+{% endfor %}
+</div>
+
+</div>
 {% endblock %}

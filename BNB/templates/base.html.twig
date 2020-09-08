@@ -12,7 +12,8 @@
         <title>BNB - {% block title %}base{% endblock %}</title>
 
 </head>
-
+{% block body %}{% endblock %} 
+{% block javascripts %}{% endblock %}
 <body>
     <footer>
         <div class="container-fluid">
@@ -45,8 +46,8 @@
     <script src="
         https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js">
         </script>
-    {% block body %}{% endblock %}
-    {% block javascripts %}{% endblock %}
+    
+   
 
 
     {% block stylesheets %}{% endblock %}
