@@ -4,34 +4,61 @@
 
 {% block body %}
 
-<div class="container-fluid p-5">
+    <div class="container p-5">
 
- <div class="row">
-    {% for maison in maisons %}
-    {% if loop.index <=6 %}
-<div class="col-4">
-   <div class="card" style="width: 18rem;">
+        <div class="row py-5">
+            <div class="col-12">
+                <h2 class="text-danger">Les maisons</h2>
+            </div>
+        </div>
 
-      <img class="card-img-top" src="..." alt="Card image cap">
+        <div class="row">
 
-      <div class="card-body">
-         <h5 class="card-title">{{ maison.titre }}</h5>
-         <p class="card-text"{{ maison.description}}</p>
-      </div>
-      <li class="list-group-item">Superficie: {{ maison.superficie}}</li>
-         <li class="list-group-item">Chambres: {{ maison.chambres}}</li>
-         <li class="list-group-item">Prix: {{ maison.prix}}</li>
-         <li class="list-group-item">Note: {{ maison.note}} / 5</li>
-      </ul>
-      <div class="card-body">
-         <a href="#" class="card-link">Card link</a>
-         <a href="#" class="card-link">Another link</a>
-      </div>
-   </div>
-</div>
-{% endif %}
-{% endfor %}
-</div>
+            {% for maison in maisons %}
+                {# {% if loop.index <= 6 %} #}
+                    <div class="col-4 p-3">
+                        <div class="card">
 
-</div>
+                            <img class="card-img-top" src="{{ maison.img1 }}" alt="Card image cap">
+
+                            <div class="card-body">
+                                <h5 class="card-title">{{ maison.titre }}</h5>
+                                <p class="card-text">{{ maison.description }}</p>
+                            </div>
+
+                            <ul class="list-group list-group-flush">
+                                <li class="list-group-item">Superficie : {{ maison.superficie }}</li>
+                                <li class="list-group-item">Chambres : {{ maison.chambres }}</li>
+                                <li class="list-group-item">Prix : {{ maison.prix }}</li>
+                                <li class="list-group-item">Note : {{ maison.note }} / 5</li>
+                            </ul>
+
+                            <div class="card-body">
+                                <a href="#" class="card-link">Card link</a>
+                                <a href="#" class="card-link">Another link</a>
+                            </div>
+
+                        </div>
+                    </div>
+                {# {% endif %} #}
+            {% endfor %}
+
+        </div>
+
+        <div class="row py-5">
+            <div class="col-12 text-center">
+                <button type="button" class="btn btn-outline-dark">Voir toutes les maisons</button>
+            </div>
+        </div>
+
+        <div class="dropdown-divider m-5"></div>
+
+        <div class="row py-5">
+            <div class="col-12">
+                <h2>Les Appartements</h2>
+            </div>
+        </div>
+        
+    </div>
+
 {% endblock %}

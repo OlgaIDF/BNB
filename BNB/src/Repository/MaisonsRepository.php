@@ -46,12 +46,28 @@ class MaisonsRepository extends ServiceEntityRepository
             ->getOneOrNullResult()
         ;
     }
-    
-    public function findSix(){
-        return $this->createQueryBuilder('c')
-           ->
-        
-    }
-   */ 
-}
+    */
 
+    public function findSix() /* pour ne sélectionner que 6 maisons */
+    {
+        return $this->createQueryBuilder('s') /* 's' est un alias */
+            ->andWhere('s.id > :val') /* on cherhce un id supérieur à une valeur */
+            ->setParameter('val', '0') /* on donne la valeur */
+            ->orderBy('s.id', 'DESC') /* tri en ordre décroissant */
+            ->setMaxResults(6) /* on sélectionne 6 résultats maximum */
+            ->getQuery() /* requête */
+            ->getResult() /* résultats */
+        ;
+    }
+
+    public function findByMinSize($superficieMini) /* pour sélectionner par superficie */
+    {
+        return $this->createQueryBuilder('ms')
+            ->andWhere('ms.superficie < :val') /* on cherche une superficie < une valeur */
+            ->setParameter('val', $superficieMini) /* on définit cette valeur*/
+            ->orderBy('ms.superficie', 'DESC') /* tri en ordre décroissant */
+            ->getQuery() /* requête */
+            ->getResult() /* résultats */
+        ;
+    }
+}
