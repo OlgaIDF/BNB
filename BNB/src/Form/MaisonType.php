@@ -34,13 +34,15 @@ class MaisonType extends AbstractType
             ->add('chambres', IntegerType::class, [
                 'required' => true,
                 'attr' => [
-                    'placeholder' => 'ex.: 9'
+                    'placeholder' => 'ex.: 9',
+                    'min'=>0
                 ]
             ])
             ->add('prix', MoneyType::class, [
                 'required' => true,
                 'attr' => [
-                    'placeholder' => 'ex.: 99,00'
+                    'placeholder' => 'ex.: 99,00',
+                    'min'=>0
                 ]
             ])
             ->add('note', ChoiceType::class, [
@@ -55,7 +57,8 @@ class MaisonType extends AbstractType
             ->add('superficie', IntegerType::class, [
                 'required' => true,
                 'attr' => [
-                    'placeholder' => 'ex.: 129'
+                    'placeholder' => 'ex.: 129',
+                    'min'=>0
                 ]
             ])
             ->add('img1', TextType::class, [
@@ -65,16 +68,21 @@ class MaisonType extends AbstractType
                 ]
             ])
             ->add('img2', TextType::class, [
+                'required' => false,
                 'attr' => [
                     'placeholder' => 'ex.: maison1-2.png'
                 ]
             ])
             ->add('img3', TextType::class, [
+                'required' => false,
                 'attr' => [
                     'placeholder' => 'ex.: maison1-3.png'
                 ]
             ])
-            ->add('save', SubmitType::class)
+            ->add('save', SubmitType::class,[
+                'label' => 'Valider'
+            ] )
+
         ;
     }
 

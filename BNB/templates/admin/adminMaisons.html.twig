@@ -30,13 +30,14 @@ block body %}
        <td>{{maison.note}}</td>
        <td>{{maison.superficie}}</td>
        <td>
-          <a href="">Modifier</a> | <a href="">Suprimer</a>
+          <a href="{{ path('maison_update', {'id':maison.id}) }}"  class="btn btn-outline-dark pl-2">Modifier</a> 
+          <a href="{{ path('maison_delete', {'id':maison.id}) }}" class="btn btn-outline-dark ">Suprimer</a>
        </td>
     </tr>
     {% endfor %}
     </tbody>
   </table>
-  <a href="{{path('maison_create')}}">Ajouter</a>
+  <a href="{{path('maison_create')}} " class="btn btn-primary float-right">Ajouter</a>
 </div>
 
 {% endblock %}

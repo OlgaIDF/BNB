@@ -14,10 +14,21 @@
 
 <body>
   <header>
+
+    {% for label, messages in app.flashes(['success', 'danger']) %}
+    {% for message in messages %}
+    <div class="flash-{{ label }} p-3 fixed-top bg-{{ label }} text-white text-center">
+      {{ message }}
+    </div>
+    {% endfor %}
+    {% endfor %}
+
     <div class="container-fluid m-0 p-0">
       <div class="jumbotron mb-0 bg-dark text-white text-center">
         <h1>BNB - espace administrateur</h1>
         <p>Bienvenue sur l'espace administrateur du site BNB</p>
+
+
       </div>
     </div>
   </header>
