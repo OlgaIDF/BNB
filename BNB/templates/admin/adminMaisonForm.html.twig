@@ -1,0 +1,17 @@
+{% extends 'baseAdmin.html.twig' %}
+{% block title %}maisons-form{% endblock %}
+
+{% block body %}
+
+{{ parent()}}
+
+<div class="col-10 p-3">
+   <h2>Formulaire</h2>
+
+   {{ form_start(formulaireMaison) }}
+   {{ form_end(formulaireMaison) }}
+   
+</div>
+
+
+{% endblock %}
