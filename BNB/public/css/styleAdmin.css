@@ -1,0 +1,37 @@
+  
+/* **************************************** RESET **************************************** */
+
+*{
+   margin: 0;
+   padding: 0;
+   text-decoration: none;
+   list-style-type: none;
+   font-weight: lighter;
+   font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+}
+
+/* **************************************** ADMIN **************************************** */
+
+.jumbotron{
+   border-radius: 0;
+}
+
+.aside{
+   min-height: 65vh;
+}
+
+a{
+   color: #FFFFFF;
+}
+
+   a:hover{
+       color: #FFFFFF;
+   }
+
+table a{
+   color: #000000;
+}
+
+   table a:hover{
+       color: #000000;
+   }

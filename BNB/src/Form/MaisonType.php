@@ -6,6 +6,7 @@ use App\Entity\Maisons;
 use Symfony\Component\Form\AbstractType;
 use Symfony\Component\Form\FormBuilderInterface;
 use Symfony\Component\OptionsResolver\OptionsResolver;
+use Symfony\Component\Form\Extension\Core\Type\FileType;
 use Symfony\Component\Form\Extension\Core\Type\TextType;
 use Symfony\Component\Form\Extension\Core\Type\MoneyType;
 use Symfony\Component\Form\Extension\Core\Type\ChoiceType;
@@ -35,14 +36,15 @@ class MaisonType extends AbstractType
                 'required' => true,
                 'attr' => [
                     'placeholder' => 'ex.: 9',
-                    'min'=>0
+                    'min' => 0
                 ]
+                
             ])
             ->add('prix', MoneyType::class, [
                 'required' => true,
                 'attr' => [
                     'placeholder' => 'ex.: 99,00',
-                    'min'=>0
+                    'min' => 0
                 ]
             ])
             ->add('note', ChoiceType::class, [
@@ -58,31 +60,37 @@ class MaisonType extends AbstractType
                 'required' => true,
                 'attr' => [
                     'placeholder' => 'ex.: 129',
-                    'min'=>0
+                    'min' => 0
                 ]
             ])
-            ->add('img1', TextType::class, [
+            ->add('img1', FileType::class, [
                 'required' => true,
+                'mapped' => false,
+                'label' => 'Photo 1',
                 'attr' => [
                     'placeholder' => 'ex.: maison1-1.png'
                 ]
             ])
-            ->add('img2', TextType::class, [
+            ->add('img2', FileType::class, [
                 'required' => false,
+                'mapped' => false,
+                'label' => 'Photo 2',
                 'attr' => [
                     'placeholder' => 'ex.: maison1-2.png'
                 ]
             ])
-            ->add('img3', TextType::class, [
+            ->add('img3', FileType::class, [
                 'required' => false,
+                'mapped' => false,
+                'label' => 'Photo 3',
                 'attr' => [
                     'placeholder' => 'ex.: maison1-3.png'
                 ]
             ])
-            ->add('save', SubmitType::class,[
+            ->add('save', SubmitType::class, [
                 'label' => 'Valider'
-            ] )
-
+            ]
+            )
         ;
     }
 

@@ -12,45 +12,47 @@
         <title>BNB - {% block title %}base{% endblock %}</title>
 
 </head>
-{% block body %}{% endblock %} 
-{% block javascripts %}{% endblock %}
-<body>
-    <footer>
-        <div class="container-fluid">
-            <div class="row text-center bg-dark text-white">
-                <div class="col-md-6 p-5 font-weight-light">
-                    <p class="font-weight-bold">Coordonn&eacute;es</p>
-                    <div class="dropdown-divider m-3 "></div>
-                    <p>100 rue du Village</p>
-                    <p>99999 Ville</p>
-                    <p>01.02.30.36.98</p>
-                    <p>nom@gmail.com</p>
-                </div>
 
-                <div class="col-md-6 p-5 font-weight-light">
-                    <p class="font-weight-bold">&Agrave; propos</p>
-                    <div class="dropdown-divider m-3 "></div>
-                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut
-                        labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco
-                        laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in
-                        voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat
-                        non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+<body>
+
+    {% block body %}{% endblock %}
+    {% block javascripts %}{% endblock %}
+
+    
+
+    <footer class="bg-light">
+        <div class="container-fluid">
+            <div class="row text-center text-dark">
+                <div class="col-md-4 p-5 my-auto">
+                    <p>QUELQUES LIENS</p>
+                    <p class="dropdown-divider"></p>
+                    <ul>
+                        <li><a href="{{ path('home') }}">Accueil</a></li>
+                        <li><a href="{{ path('admin') }}">Admin</a></li>
+                    </ul>
                 </div>
-                <div class="col-12 p-3 font-weight-light">
-                    {{copyright|raw}}
+                <div class="col-md-4 p-5 my-auto">
+                    <span class="logo"><img src="{{ asset('img/logo.png') }}" alt="logo BNB"></span>
+                </div>
+                <div class="col-md-4 p-5 my-auto">
+                    <p>COORDONN&Eacute;ES</p>
+                    <p class="dropdown-divider"></p>
+                    <p>10 rue du Village</p>
+                    <p>12345 Ville</p>
+                    <p>01.23.45.67.89</p>
+                    <p>prenom.nom@mail.com</p>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-12 text-center">
+                    <p>{{ copyright|raw }}</p>
                 </div>
             </div>
         </div>
     </footer>
 
-    <script src="
-        https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js">
-        </script>
-    
-   
-
-
-    {% block stylesheets %}{% endblock %}
+    <script src="https://code.jquery.com/jquery-3.5.1.js" integrity="sha256-QWo7LDvxbWT2tbbQ97B53yJnYU3WhH/C8ycbRAkjPDc=" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
 
 </body>
 

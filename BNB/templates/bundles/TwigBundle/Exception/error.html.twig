@@ -1,0 +1,27 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Page non trouvée{% endblock %}
+
+{% block body %}
+<body>
+<header>
+    
+    <header class="bg-dark my-auto">
+        <h1 class="text-center">BNB</h1>
+        <h2 class="text-center">Comme AirBNB, mais en mieux</h2>
+    </header>
+    </div>
+</header>
+
+    <div class="container py-5">
+      <h1 class="display-1 text-center py-5">{{status_code}}</h1>
+     
+      <div class="row justify-content-center">
+        <div class="col-6 text-center">
+      <p class="lead">{{status_text}}</p>
+    </div>
+  </div>
+</div>
+
+</body>
+{% endblock %}

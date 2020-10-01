@@ -1,0 +1,29 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Access interdit{% endblock %}
+
+{% block body %}
+<body>
+    <header>
+        
+        <header class="bg-dark my-auto">
+            <h1 class="text-center">BNB</h1>
+            <h2 class="text-center">Comme AirBNB, mais en mieux</h2>
+        </header>
+        </div>
+    </header>
+    
+        <div class="container py-5">
+          <h1 class="display-1 text-center py-5">403</h1>
+          <h3 class="display-4 text-center">Forbidden</h3>
+          <div class="row justify-content-center">
+            <div class="col-6 text-center
+            ">
+          <p class="lead">DÉSOLÉ MAIS VOUS N'ETES PAS AUTORISE A ACCEDER A CETTE PAGE</p>
+          <a href="{{ path('home') }}">Retorner dans le site </a>
+        </div>
+      </div>
+    </div>
+    
+    </body>
+{% endblock %}

@@ -4,11 +4,16 @@
 
 {% block body %}
 
+    <header class="bg-dark my-auto">
+        <h1 class="text-center">BNB</h1>
+        <h2 class="text-center">Comme AirBNB, mais en mieux</h2>
+    </header>
+
     <div class="container p-5">
 
         <div class="row py-5">
             <div class="col-12">
-                <h2 class="text-danger">Les maisons</h2>
+                <h2>Les logements</h2>
             </div>
         </div>
 
@@ -19,7 +24,7 @@
                     <div class="col-4 p-3">
                         <div class="card">
 
-                            <img class="card-img-top" src="{{ maison.img1 }}" alt="Card image cap">
+                            <img class="card-img-top" src="{{ asset('img/maisons/' ~ maison.img1) }}" alt="photo principale {{ maison.titre }}">
 
                             <div class="card-body">
                                 <h5 class="card-title">{{ maison.titre }}</h5>
@@ -55,7 +60,7 @@
 
         <div class="row py-5">
             <div class="col-12">
-                <h2>Les Appartements</h2>
+                <h2>Les propri&eacute;taires</h2>
             </div>
         </div>
         
